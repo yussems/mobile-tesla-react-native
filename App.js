@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, ImageBackground, StatusBar } from "react-native";
-import CarItem from './component/carItem/index'
-import CarsList from './component/CarsList/index'
+import React from "react";
+import {
+  View,
+  StatusBar,
+  StyleSheet
+} from "react-native";
+import Header from "./component/Header/index";
+import CarsList from "./component/CarsList/index";
 const App = () => {
   return (
-    
-    <View >
-      
-      <StatusBar style='auto' />
-      <CarsList/>
-      
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <Header />
+      <CarsList  />
     </View>
   );
 };
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+  container : {
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  }
+})
 
 export default App;
